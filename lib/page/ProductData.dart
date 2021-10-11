@@ -4,8 +4,10 @@ class ProductData {
   String? brand;
   String? price;
   String? image;
+  String? desription;
 
-  ProductData(this.id, this.name, this.brand, this.price, this.image);
+  ProductData(
+      this.id, this.name, this.brand, this.price, this.image, this.desription);
 
   ProductData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -13,6 +15,7 @@ class ProductData {
     brand = json['brand'];
     image = json['image'];
     price = json['price'];
+    desription = json['desription'];
   }
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
@@ -21,6 +24,7 @@ class ProductData {
     data['brand'] = this.brand;
     data['image'] = this.image;
     data['price'] = this.price;
+    data['desription'] = this.desription;
     return data;
   }
 }

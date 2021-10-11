@@ -91,8 +91,12 @@ class SubPage extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => HomeScreen()));
                   },
-                  child: const Icon(Icons.add),
+                  child: const Icon(
+                    Icons.add,
+                  ),
                   backgroundColor: Colors.green,
+
+                  // elevation: 0.5,
                 ),
               ],
             ),

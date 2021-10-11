@@ -194,7 +194,8 @@ class _SearchBarState extends State<SearchBar> {
           trailing: Text(
             "₹${food_data[index]['price']}",
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.green,
+              letterSpacing: 0.5,
               fontSize: 16,
             ),
           ),
