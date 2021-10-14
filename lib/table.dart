@@ -43,7 +43,7 @@ class MainPage extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (BuildContext _context,int _index){
         return Container(
-                    
+
                       padding: const EdgeInsets.all(5),
                       margin: const EdgeInsets.all(10.0),
 
