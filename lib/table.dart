@@ -17,12 +17,7 @@ class App extends StatelessWidget {
 }
 
 class MainPage extends StatelessWidget {
-  // Future navigateToFAQs(context) async {
-  //   Navigator.push(context, MaterialPageRoute(builder: (context) => FAQs()));
-  // }
-  // Future navigateToContactus(context) async {
-  //   Navigator.push(context, MaterialPageRoute(builder: (context) => Contactus()));
-  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,431 +27,67 @@ class MainPage extends StatelessWidget {
         //foregroundColor: Colors.black,
         backgroundColor: Colors.cyan,
       ),
-      body: SafeArea(
-        //backgroundColor:Colors.blueAccent,
+      body: Container(
+        child: _tableGridview(),
 
-        child: Container(
-            height: 740,
-            width: 480,
-            margin: EdgeInsets.only(
-                left: 10.0, top: 20.0, right: 10.0, bottom: 30.0),
-            padding: EdgeInsets.only(
-                left: 20.0, top: 30.0, right: 20.0, bottom: 20.0),
-            //color: Colors.blueGrey,
-            child: GridView.count(
-              primary: false,
-              //padding: const EdgeInsets.all(20),
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-              crossAxisCount: 2,
-              children: <Widget>[
-                Container(
-                  // color: Colors.blue[50],
-                  padding: const EdgeInsets.all(5),
-
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 130.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "1",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SubPage()));
-                      // TODO
-                      // navigateToFAQs(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-
-                  //color: Colors.teal[100],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "2",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[200],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "3",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                      // navigateToContactus(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  //color: Colors.teal[300],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "4",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[400],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "5",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[400],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "6",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[400],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "7",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[400],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "8",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[400],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "9",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[400],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: RaisedButton(
-                    textColor: Colors.black,
-                    color: Colors.blue[50],
-                    // child: Icon(Icons.add),
-                    child: new Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new Image.asset(
-                          'assets/images/t1.png',
-                          //frameBuilder: ,
-                          height: 100.0,
-                          width: 101.0,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 0.0),
-                          child: new Text(
-                            "10",
-                            style: TextStyle(
-                                fontSize: 15.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-
-                      //('Go to SubPage'),
-                    ),
-                    onPressed: () {
-                      // TODO
-                      // navigateToSubPage(context);
-                    },
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    // boxShadow: [
-                    // BoxShadow(color: Colors.green, spreadRadius: 3),],
-                  ),
-                  // color: Colors.teal[400],
-                ),
-              ],
-            )),
       ),
     );
+  }
+  Widget _tableGridview(){
+    return GridView.builder(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 5,
+          crossAxisSpacing:5
+      ),
+      itemCount: 10,
+      itemBuilder: (BuildContext _context,int _index){
+        return Container(
+                    
+                      padding: const EdgeInsets.all(5),
+                      margin: const EdgeInsets.all(10.0),
+
+                      child: RaisedButton(
+                        textColor: Colors.black,
+                        color: Colors.blue[50],
+
+                        // child: Icon(Icons.add),
+                        child: new Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            new Image.asset(
+                              'assets/images/t1.png',
+                              //frameBuilder: ,
+                              height: 100.0,
+                              width: 130.0,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 0.0),
+                              child: new Text(
+                                (_index+1).toString() ,
+                                style: TextStyle(
+                                    fontSize: 15.0, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ],
+                        ),
+                        onPressed: () {
+                          Navigator.push( _context , MaterialPageRoute(builder: (context) => SubPage()));
+
+                          // navigateToFAQs(context);
+                        },
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan,
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+
+                      ),
+
+
+                    );
+
+      },
+        );
+
   }
 }
