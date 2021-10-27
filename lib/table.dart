@@ -72,7 +72,12 @@ class MainPage extends StatelessWidget {
                           ],
                         ),
                         onPressed: () {
-                          Navigator.push( _context , MaterialPageRoute(builder: (context) => SubPage()));
+                          // Navigator.push( _context , MaterialPageRoute(builder: (context) => SubPage()));
+                          Navigator.push(
+                              _context,
+                              MaterialPageRoute(
+                                builder: (context) => SubPage( tableno :_index+1 ,),
+                              ));
 
                           // navigateToFAQs(context);
                         },

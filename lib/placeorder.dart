@@ -14,19 +14,23 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Navigation',
-      home: SubPage(),
+      home: SubPage(tableno: 0,),
     );
   }
 }
 
 class SubPage extends StatelessWidget {
   List food_data = FOOD_DATA;
+  final int tableno;
+
+  // receive data from the FirstScreen as a parameter
+  SubPage({ Key? key, required this.tableno}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.cyan,
-        title: Text("Table No: 1"),
+        title: Text("Table No: "+(tableno).toString()),
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 20.0),
